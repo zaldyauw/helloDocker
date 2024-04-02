@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hellodocker-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: hellodocker-deployment
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hellodocker-deployment
-        image: zaldyauw/hellodocker
+        image: jamesndubuisi/hellodocker
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
